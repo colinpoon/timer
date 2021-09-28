@@ -41,6 +41,46 @@ process.stdin.on('data', (key) => {
       process.stdout.write('\x07');
     }, 1000);
   }
+  if (key === '\u0032') {
+    setTimeout(() => {
+      process.stdout.write('\x07');
+    }, 2000);
+  }
+  if (key === '\u0033') {
+    setTimeout(() => {
+      process.stdout.write('\x07');
+    }, 3000);
+  }
+  if (key === '\u0034') {
+    setTimeout(() => {
+      process.stdout.write('\x07');
+    }, 4000);
+  }
+  if (key === '\u0035') {
+    setTimeout(() => {
+      process.stdout.write('\x07');
+    }, 5000);
+  }
+  if (key === '\u0036') {
+    setTimeout(() => {
+      process.stdout.write('\x07');
+    }, 6000);
+  }
+  if (key === '\u0037') {
+    setTimeout(() => {
+      process.stdout.write('\x07');
+    }, 7000);
+  }
+  if (key === '\u0038') {
+    setTimeout(() => {
+      process.stdout.write('\x07');
+    }, 8000);
+  }
+  if (key === '\u0039') {
+    setTimeout(() => {
+      process.stdout.write('\x07');
+    }, 9000);
+  } 
 });
 
 
@@ -48,9 +88,6 @@ process.stdin.on('data', (key) => {
 // process.stdin.on('data', (key) => {
 //   process.stdout.write('.');
 // });
-
-
-
 
 // // Random number from 1 - 10
 // const numberToGuess = Math.floor(Math.random() * 10) + 1;
