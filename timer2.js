@@ -34,53 +34,62 @@ process.stdin.on('data', (key) => {
   }
 });
 
+const keys = ['\u0031', '\u0032','\u0033','\u0034','\u0035','\u0036','\u0037','\u0038','\u0039' ]
+
 // TIMER with 1 ======> U+0031
 process.stdin.on('data', (key) => {
-  if (key === '\u0031') {
+  if (keys.includes(key)) {
     setTimeout(() => {
       process.stdout.write('\x07');
-    }, 1000);
+    }, 1000 * key);
+  } else {
+    console.log("not allowed");
   }
-  if (key === '\u0032') {
-    setTimeout(() => {
-      process.stdout.write('\x07');
-    }, 2000);
-  }
-  if (key === '\u0033') {
-    setTimeout(() => {
-      process.stdout.write('\x07');
-    }, 3000);
-  }
-  if (key === '\u0034') {
-    setTimeout(() => {
-      process.stdout.write('\x07');
-    }, 4000);
-  }
-  if (key === '\u0035') {
-    setTimeout(() => {
-      process.stdout.write('\x07');
-    }, 5000);
-  }
-  if (key === '\u0036') {
-    setTimeout(() => {
-      process.stdout.write('\x07');
-    }, 6000);
-  }
-  if (key === '\u0037') {
-    setTimeout(() => {
-      process.stdout.write('\x07');
-    }, 7000);
-  }
-  if (key === '\u0038') {
-    setTimeout(() => {
-      process.stdout.write('\x07');
-    }, 8000);
-  }
-  if (key === '\u0039') {
-    setTimeout(() => {
-      process.stdout.write('\x07');
-    }, 9000);
-  } 
+  // if (key === '\u0031') {
+  //   setTimeout(() => {
+  //     process.stdout.write('\x07');
+  //   }, 1000);
+  // }
+  // if (key === '\u0032') {
+  //   setTimeout(() => {
+  //     process.stdout.write('\x07');
+  //   }, 2000);
+  // }
+  // if (key === '\u0033') {
+  //   setTimeout(() => {
+  //     process.stdout.write('\x07');
+  //   }, 3000);
+  // }
+  // if (key === '\u0034') {
+  //   setTimeout(() => {
+  //     process.stdout.write('\x07');
+  //   }, 4000);
+  // }
+  // if (key === '\u0035') {
+  //   setTimeout(() => {
+  //     process.stdout.write('\x07');
+  //   }, 5000);
+  // }
+  // if (key === '\u0036') {
+  //   setTimeout(() => {
+  //     process.stdout.write('\x07');
+  //   }, 6000);
+  // }
+  // if (key === '\u0037') {
+  //   setTimeout(() => {
+  //     process.stdout.write('\x07');
+  //   }, 7000);
+  // }
+  // if (key === '\u0038') {
+  //   setTimeout(() => {
+  //     process.stdout.write('\x07');
+  //   }, 8000);
+  // }
+  // if (key === '\u0039') {
+  //   setTimeout(() => {
+  //     process.stdout.write('\x07');
+  //   }, 9000);
+  // } 
 });
 
 
